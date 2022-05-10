@@ -72,7 +72,7 @@ async function scrape() {
     await page.goto('https://www.pkobp.pl/waluty/')
     element = await page.waitForSelector("#base_rate > p")
     value = await page.evaluate(element => element.textContent, element)
-    console.log('\n PKOBP SSB: ' + value)
+    console.log('\nPKOBP SSB: ' + value)
 
     // BOŚ
     await page.goto('https://www.bosbank.pl/klient-indywidualny/pozyczki-i-kredyty/kredyty-i-pozyczki-hipoteczne/kredyt-hipoteczny')
