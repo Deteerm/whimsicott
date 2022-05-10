@@ -6,9 +6,9 @@ npm i
 
 ### To run
 
-open whimsicott.sh
+whimsicott.sh
 
 
-Results will be saved in interestRates.txt file
+Results will be saved in rates folder.
 
 Enjoy!
