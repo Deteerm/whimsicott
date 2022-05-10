@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-echo "Script running..."
+echo "Getting iterest rates..."
 file=`date +"%Y-%m-%d".txt`
 path="./rates/"
 node.exe whimsicott.js > $path$file
