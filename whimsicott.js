@@ -49,23 +49,25 @@ async function scrape() {
         value =  await page.evaluate(element => element.textContent, element)
         console.log(`   Lekka rata:  ${value}`)
     
-        // PROMOTION OFFERS
-        try {
-            element = await page.waitForSelector("#centerMe > thead > tr > th:nth-child(3) > p:nth-child(1) > span")
-            offerName =  await page.evaluate(element => element.textContent, element)
-            console.log(`\n ${offerName}`)
+        // 2nd PROMOTION OFFER
+
+        // UNCOMMENT IF YOU'RE WILLING TO GET DATA ABOUT THE OLDER PROMOTION (IF IT'S PRESENT)
+        // try {
+        //     element = await page.waitForSelector("#centerMe > thead > tr > th:nth-child(3) > p:nth-child(1) > span")
+        //     offerName =  await page.evaluate(element => element.textContent, element)
+        //     console.log(`\n ${offerName}`)
             
-            element = await page.waitForSelector("#centerMe > tbody > tr:nth-child(1) > td:nth-child(3) > p:nth-child(1) > strong > span > span")
-            value =  await page.evaluate(element => element.textContent, element)
-            console.log(`   Łatwy start: ${value}`)
+        //     element = await page.waitForSelector("#centerMe > tbody > tr:nth-child(1) > td:nth-child(3) > p:nth-child(1) > strong > span > span")
+        //     value =  await page.evaluate(element => element.textContent, element)
+        //     console.log(`   Łatwy start: ${value}`)
         
-            element = await page.waitForSelector("#centerMe > tbody > tr:nth-child(1) > td:nth-child(3) > p:nth-child(2) > span > strong")
-            value =  await page.evaluate(element => element.textContent, element)
-            console.log(`   Lekka rata:  ${value}`)
-        } catch (e) {
-            console.log('\n Promocyjna oferta:')
-            console.log('   Sprawdź czy ING nie wycofowało tej oferty!')
-        }
+        //     element = await page.waitForSelector("#centerMe > tbody > tr:nth-child(1) > td:nth-child(3) > p:nth-child(2) > span > strong")
+        //     value =  await page.evaluate(element => element.textContent, element)
+        //     console.log(`   Lekka rata:  ${value}`)
+        // } catch (e) {
+        //     console.log('\n Promocyjna oferta:')
+        //     console.log('   Sprawdź czy ING nie wycofowało tej oferty!')
+        // }
         
         // -------------------------------------------------------------------------
         
